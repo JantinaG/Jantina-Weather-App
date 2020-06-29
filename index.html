@@ -25,85 +25,95 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <div class="row">
-            <div class="col-8">
-              <h1>Doolin, IE</h1>
+    <div class="card card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div class="row">
+              <!-- City and Dates -->
+              <div class="col-8 cityDates">
+                <h1>Doolin, IE</h1>
+              </div>
+              <div class="col-4 cityDates">
+                <h6>29 June 2020</h6>
+                <h6>Monday, 11:04</h6>
+              </div>
+              <!-- Icon, Today Temp and Discription -->
+              <div class="col-6 middleBlock">
+                <i class="fas fa-cloud-showers-heavy today-icon"></i>
+              </div>
+              <div class="col-6 middleBlock">
+                <h2>12 <a href="#"> *C </a>|<a href="#"> *F</a></h2>
+                <p>Rainy</p>
+              </div>
             </div>
-            <div class="col-4">
-              <h6>29 June 2020</h6>
-              <h6>Monday, 11:04</h6>
-            </div>
-            <div class="row"></div>
-            <div class="col-6">
-              <p>🌧</p>
-            </div>
-            <div class="col-6">
-              <h2>12 <a href="#"> *C </a>|<a href="#"> *F</a></h2>
-              <p>Rainy</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <p><strong> Wind:</strong> 30 km/h</p>
-            </div>
-            <div class="col-6">
-              <p><strong> Humidity:</strong> 80 %</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="row">
-            <div class="col-10">
-              <form>
-                <input
-                  class="form-control"
-                  type="text"
-                  placeholder="🔍 Search"
-                  autocomplete="off"
-                />
-              </form>
-            </div>
-            <div class="2">
-              <button>
-                <i class="fas fa-map-marker-alt"></i>
-              </button>
+            <!-- Wind and Humidity -->
+            <div class="row windHum">
+              <div class="col-6">
+                <p><strong> Wind:</strong> 30 km/h</p>
+              </div>
+              <div class="col-6">
+                <p><strong> Humidity:</strong> 80 %</p>
+              </div>
             </div>
           </div>
-          <div class="col-12">
-            <h5 class="text-center">Riddle of the day:</h5>
-            <p>What can you hold in your right hand but not your left?</p>
-            <p><small>Answer: Your right elbow </small></p>
+          <div class="col-4">
+            <div class="row">
+              <!-- Search -->
+              <div class="col-10 padding">
+                <form>
+                  <input
+                    class="form-control search"
+                    type="text"
+                    placeholder="🔍 Search"
+                    autocomplete="off"
+                  />
+                </form>
+              </div>
+              <!-- Current Location -->
+              <div class="col-2 padding">
+                <button class="location">
+                  <i class="fas fa-map-marker-alt"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Riddle Box -->
+            <div class="col-12 riddleBox">
+              <h5 class="text-center">Riddle of the day:</h5>
+              <p>What can you hold in your right hand but not your left?</p>
+              <p class="riddleAnswer">
+                <small>Answer: Your right elbow </small>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row justify-content-center text-center">
-        <div class="col-sm-2 rounded-lg shadow-sm p-3 mb-5 rounded fiveDay">
-          <h4>Tomorrow</h4>
-          <p class="icon">☀</p>
-          <p class="text-muted"><strong>23*C</strong>/12*C</p>
-        </div>
-        <div class="col-sm-2 rounded-lg shadow-sm p-3 mb-5 rounded fiveDay">
-          <h4>Sunday</h4>
-          <p class="icon">☀</p>
-          <p class="text-muted"><strong>24*C</strong>/10*C</p>
-        </div>
-        <div class="col-sm-2 rounded-lg shadow-sm p-3 mb-5 rounded fiveDay">
-          <h4>Monday</h4>
-          <p class="icon">☀</p>
-          <p class="text-muted"><strong>21*C</strong>/12*C</p>
-        </div>
-        <div class="col-sm-2 rounded-lg shadow-sm p-3 mb-5 rounded fiveDay">
-          <h4>Tuesday</h4>
-          <p class="icon">☀</p>
-          <p class="text-muted"><strong>21*C</strong>/11*C</p>
-        </div>
-        <div class="col-sm-2 rounded-lg shadow-sm p-3 mb-5 rounded fiveDay">
-          <h4>Wednesday</h4>
-          <p class="icon">☀</p>
-          <p class="text-muted"><strong>20*C</strong>/10*C</p>
+        <!-- Five Day Forecast -->
+        <div class="row justify-content-center text-center">
+          <div class="col-sm-2 fiveDay">
+            <h4>Tomorrow</h4>
+            <p class="icon">☀</p>
+            <p class="text-muted"><strong>23*C</strong>/12*C</p>
+          </div>
+          <div class="col-sm-2 fiveDay">
+            <h4>Sunday</h4>
+            <p class="icon">☀</p>
+            <p class="text-muted"><strong>24*C</strong>/10*C</p>
+          </div>
+          <div class="col-sm-2 fiveDay">
+            <h4>Monday</h4>
+            <p class="icon">☀</p>
+            <p class="text-muted"><strong>21*C</strong>/12*C</p>
+          </div>
+          <div class="col-sm-2 fiveDay">
+            <h4>Tuesday</h4>
+            <p class="icon">☀</p>
+            <p class="text-muted"><strong>21*C</strong>/11*C</p>
+          </div>
+          <div class="col-sm-2 fiveDay">
+            <h4>Wednesday</h4>
+            <p class="icon">☀</p>
+            <p class="text-muted"><strong>20*C</strong>/10*C</p>
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +123,7 @@
       >
       by Jantina Eefting
     </p>
+
     <script src="src/script.js"></script>
   </body>
 </html>

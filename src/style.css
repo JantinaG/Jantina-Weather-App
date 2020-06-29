@@ -1,7 +1,60 @@
-body {
+.card {
   font-family: "Pangolin", cursive;
   max-width: 1000px;
   margin: 20px auto;
+  margin-bottom: 0px !important;
   background-color: black;
-  color: aliceblue;
+  color: #e7e7e7;
+  border: 10px solid brown;
+}
+.container {
+  margin: 0 !important;
+}
+p {
+  margin-bottom: 0 !important;
+}
+.middleBlock {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.today-icon {
+  font-size: 90px;
+  padding: 0 25%;
+}
+.windHum {
+  margin-bottom: 15px;
+  padding-top: 20px;
+}
+button {
+  margin: 0px !important;
+}
+.search {
+  border: 0 !important;
+  background-color: #333232;
+  color: #e7e7e7;
+}
+.padding {
+  padding: 0 3px !important;
+}
+.location {
+  border: 0 !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #6c757d;
+  color: #e7e7e7;
+  margin-bottom: 15px !important;
+}
+.riddleBox {
+  border: 5px double #e7e7e7;
+  border-radius: 15px;
+  padding: 15px;
+}
+.riddleAnswer {
+  display: block;
+  position: relative;
+  transform: rotateY(180deg);
+}
+.fiveDay {
+  margin: 0 !important;
+  padding-top: 15px;
 }
