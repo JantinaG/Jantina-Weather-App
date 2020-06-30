@@ -23,6 +23,8 @@
       src="https://kit.fontawesome.com/190163acdf.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Weather API -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="card card-body">
@@ -32,28 +34,36 @@
             <div class="row">
               <!-- City and Dates -->
               <div class="col-8 cityDates">
-                <h1>Doolin, IE</h1>
+                <h1 id="cityName">Search a city</h1>
               </div>
               <div class="col-4 cityDates">
-                <h6>29 June 2020</h6>
-                <h6>Monday, 11:04</h6>
+                <h6 id="date"></h6>
+                <h6>
+                  <span id="weekday"></span>,
+                  <span id="time"></span>
+                </h6>
               </div>
               <!-- Icon, Today Temp and Discription -->
               <div class="col-6 middleBlock">
                 <i class="fas fa-cloud-showers-heavy today-icon"></i>
               </div>
               <div class="col-6 middleBlock">
-                <h2>12 <a href="#"> *C </a>|<a href="#"> *F</a></h2>
-                <p>Rainy</p>
+                <h2>
+                  <span id="temp"></span>
+                  <a href="#"> *C </a>
+                  |
+                  <a href="#">*F </a>
+                </h2>
+                <p id="description"></p>
               </div>
             </div>
             <!-- Wind and Humidity -->
             <div class="row windHum">
               <div class="col-6">
-                <p><strong> Wind:</strong> 30 km/h</p>
+                <p><strong> Wind:</strong> <span id="wind"></span></span> km/h</p>
               </div>
               <div class="col-6">
-                <p><strong> Humidity:</strong> 80 %</p>
+                <p><strong> Humidity:</strong> <span id="humidity"></span> %</p>
               </div>
             </div>
           </div>

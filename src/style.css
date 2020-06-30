@@ -21,6 +21,9 @@ p {
   font-size: 90px;
   padding: 0 25%;
 }
+#description::first-letter {
+  text-transform: capitalize;
+}
 .windHum {
   margin-bottom: 15px;
   padding-top: 20px;
