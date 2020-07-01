@@ -45,22 +45,21 @@
               </div>
               <!-- Icon, Today Temp and Discription -->
               <div class="col-6 middleBlock">
-                <img src="" class="mx-auto d-block" id="todayIcon">
+                <img src="" class="mx-auto d-block" id="todayIcon" />
               </div>
               <div class="col-6 middleBlock">
-                <h2>
+                <p class="active">
                   <span id="temp"></span>
-                  <a href="#"> *C </a>
-                  |
-                  <a href="#">*F </a>
-                </h2>
+                  <a href="#" class="active" id="celsius"> *C </a>
+                  <a href="#" class="inactive" id="fahrenheit">*F </a>
+                </p>
                 <p id="description"></p>
               </div>
             </div>
             <!-- Wind and Humidity -->
             <div class="row windHum">
               <div class="col-6">
-                <p><strong> Wind:</strong> <span id="wind"></span></span> km/h</p>
+                <p><strong> Wind:</strong> <span id="wind"></span> km/h</p>
               </div>
               <div class="col-6">
                 <p><strong> Humidity:</strong> <span id="humidity"></span> %</p>

@@ -53,6 +53,7 @@ let todayIcon = document.querySelector("#todayIcon");
 
 // API integration
 function displayData(response) {
+  celsiusTemp = response.data.main.temp;
   temp.innerHTML = Math.round(response.data.main.temp);
   cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   description.innerHTML = response.data.weather[0].description;
@@ -80,3 +81,30 @@ function process(event) {
 
 let form = document.querySelector("#form");
 form.addEventListener("submit", process);
+
+// Unit conversion
+let celsiusTemp = null;
+
+function convertFC(event) {
+  event.preventDefault();
+  temp.innerHTML = Math.round(celsiusTemp);
+  celsius.classList.remove("inactive");
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  fahrenheit.classList.add("inactive");
+}
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", convertFC);
+
+function convertCF(event) {
+  event.preventDefault();
+  temp.innerHTML = Math.round(celsiusTemp * 1.8 + 32);
+  fahrenheit.classList.remove("inactive");
+  fahrenheit.classList.add("active");
+  celsius.classList.remove("active");
+  celsius.classList.add("inactive");
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", convertCF);
