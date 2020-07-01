@@ -34,6 +34,7 @@ let cityName = document.querySelector("#cityName");
 let description = document.querySelector("#description");
 let humidity = document.querySelector("#humidity");
 let wind = document.querySelector("#wind");
+let todayIcon = document.querySelector("#todayIcon")
 
 // API related
 let searchedCity = "Doolin";
@@ -63,6 +64,8 @@ function displayData(response) {
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed);
+  todayIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+  
 }
 
 axios.get(apiURL).then(displayData);
