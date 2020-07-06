@@ -55,7 +55,7 @@ p {
 button {
   margin: 0px !important;
 }
-.location {
+#location {
   border: 0 !important;
   border-radius: 5px;
   background-color: #333232;

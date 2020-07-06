@@ -39,7 +39,7 @@ function displayTime() {
   date.innerHTML = `${now.getDate()} ${
     months[now.getMonth()]
   } ${now.getFullYear()}`;
-  weekday.innerHTML = `${days[now.getDay()]}`;
+  weekday.innerHTML = `${days[now.getDay()]}, `;
   time.innerHTML = `${hours}:${minutes}`;
 }
 displayTime();
@@ -82,7 +82,7 @@ function displayForecast(response) {
   let forecast = null;
   forecastBox.innerHTML = null;
 
-  for (let index = 0; index < 5; index++) {
+  for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     let forecastIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
     let tempMax = Math.round(forecast.main.temp_max);
@@ -101,11 +101,11 @@ function displayForecast(response) {
   </div>`;
   }
 }
+// API info
+let apiKey = "3c57a9d63873260ca8362886141d8b51";
 
 // Search and API integration
 function search(city) {
-  let apiKey = "3c57a9d63873260ca8362886141d8b51";
-
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayData);
 
@@ -149,3 +149,19 @@ function convertCF(event) {
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", convertCF);
+
+// Current location
+function displayLocation(position) {
+  let currentLat = position.coords.latitude;
+  let currentLong = position.coords.longitude;
+  let urlLocation = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=metric`;
+
+  axios.get(urlLocation).then(displayData);
+}
+
+function getLocation() {
+  navigator.geolocation.getCurrentPosition(displayLocation);
+}
+
+let locationButton = document.querySelector("#location");
+locationButton.addEventListener("click", getLocation);
