@@ -87,9 +87,9 @@ function displayForecast(response) {
     let forecastIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
     let tempMax = Math.round(forecast.main.temp_max);
     let tempMin = Math.round(forecast.main.temp_min);
-    console.log(forecast);
+
     forecastBox.innerHTML += `
-  <div class="col-sm-2">
+  <div class="col-sm-2 fiveDay">
     <h6>
       ${forecastHours(forecast.dt * 1000)}
     </h6>
@@ -165,3 +165,67 @@ function getLocation() {
 
 let locationButton = document.querySelector("#location");
 locationButton.addEventListener("click", getLocation);
+
+// Riddles
+let riddle = document.querySelector("#riddle");
+let riddleAnswer = document.querySelector("#riddleAnswer");
+
+if (hours === 1 || hours === 13) {
+  riddle.innerHTML = `What can you hold in your right hand but not your left?`;
+  riddleAnswer.innerHTML = `Answer: Your right elbow`;
+}
+
+if (hours === 2 || hours === 14) {
+  riddle.innerHTML = `Which word in the dictionary is spelled incorrectly?`;
+  riddleAnswer.innerHTML = `Answer: Incorrectly`;
+}
+
+if (hours === 3 || hours === 15) {
+  riddle.innerHTML = `What two things can you never eat for breakfast?`;
+  riddleAnswer.innerHTML = `Answer: Lunch and dinner`;
+}
+
+if (hours === 4 || hours === 16) {
+  riddle.innerHTML = `How do you write cow with 13 letters?`;
+  riddleAnswer.innerHTML = `Answer: SEE-O-DOUBLE-YOU`;
+}
+
+if (hours === 5 || hours === 17) {
+  riddle.innerHTML = `What is black when it's clean and white when it's dirty?`;
+  riddleAnswer.innerHTML = `Answer: A black chalkboard`;
+}
+
+if (hours === 6 || hours === 18) {
+  riddle.innerHTML = `What has so many keys but can't open a door?`;
+  riddleAnswer.innerHTML = `Answer: A piano`;
+}
+
+if (hours === 7 || hours === 19) {
+  riddle.innerHTML = `What's the only room from which no one can enter or leave?`;
+  riddleAnswer.innerHTML = `Answer: A mushroom`;
+}
+
+if (hours === 8 || hours === 20) {
+  riddle.innerHTML = `What breaks when you say it`;
+  riddleAnswer.innerHTML = `Answer: Silence`;
+}
+
+if (hours === 9 || hours === 21) {
+  riddle.innerHTML = `What can run but never walks, has a mouth but never talks, has a head but never weeps, has a bed but never sleeps?`;
+  riddleAnswer.innerHTML = `Answer: A river`;
+}
+
+if (hours === 10 || hours === 22) {
+  riddle.innerHTML = `What has 13 hearts, but no other organs?`;
+  riddleAnswer.innerHTML = `Answer: A deck of cards`;
+}
+
+if (hours === 11 || hours === 23) {
+  riddle.innerHTML = `When 5 machines in 5 minutes produce 5 toy cars. How long do 100 machines take to produce 100 toy cars?`;
+  riddleAnswer.innerHTML = `Answer: 5 minutes`;
+}
+
+if (hours === 12 || hours === 24) {
+  riddle.innerHTML = `What can you catch but not throw?`;
+  riddleAnswer.innerHTML = `Answer: Your breath / An illness`;
+}
