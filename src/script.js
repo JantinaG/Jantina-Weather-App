@@ -8,7 +8,6 @@ let days = [
   "Friday",
   "Saturday",
 ];
-
 let months = [
   "January",
   "February",
@@ -101,6 +100,7 @@ function displayForecast(response) {
   </div>`;
   }
 }
+
 // API info
 let apiKey = "3c57a9d63873260ca8362886141d8b51";
 
@@ -225,7 +225,7 @@ if (hours === 11 || hours === 23) {
   riddleAnswer.innerHTML = `Answer: 5 minutes`;
 }
 
-if (hours === 12 || hours === 24) {
+if (hours === 12 || hours === 0) {
   riddle.innerHTML = `What can you catch but not throw?`;
   riddleAnswer.innerHTML = `Answer: Your breath / An illness`;
 }
