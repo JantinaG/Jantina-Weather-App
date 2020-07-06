@@ -69,7 +69,7 @@ button {
   border-radius: 15px;
   padding: 15px;
 }
-.riddleAnswer {
+#riddleAnswer {
   display: block;
   position: relative;
   transform: rotateY(180deg);
