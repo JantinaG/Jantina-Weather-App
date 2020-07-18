@@ -152,6 +152,7 @@ fahrenheit.addEventListener("click", convertCF);
 
 // Current location
 function displayLocation(position) {
+  forecastBox.innerHTML = null;
   let currentLat = position.coords.latitude;
   let currentLong = position.coords.longitude;
   let urlLocation = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=metric`;
