@@ -1,2 +1,0 @@
-# Jantina-Weather-App
- 
