@@ -7,54 +7,63 @@
   color: #e7e7e7;
   border: 10px solid brown;
 }
-.container {
-  margin: 0 !important;
-}
+
 p {
   margin-bottom: 0 !important;
 }
+
 .middleBlock {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
 }
+
 .active {
   font-size: 40pt;
   color: #e7e7e7;
   font-weight: bolder;
 }
+
 .active:hover {
   text-decoration: none;
   color: #e7e7e7;
 }
+
 .inactive {
   color: #7f7e7e;
   font-weight: lighter;
   font-size: 30pt;
   vertical-align: middle;
 }
+
 .inactive:hover {
   text-decoration: none;
   color: #e7e7e7;
   cursor: pointer;
 }
+
 #description:first-letter {
   text-transform: capitalize;
 }
+
 .windHum {
   margin-bottom: 15px;
   padding-top: 20px;
 }
+
 .search {
   border: 0 !important;
   background-color: #333232;
   color: #e7e7e7;
 }
+
 .padding {
   padding: 0 3px !important;
 }
+
 button {
   margin: 0px !important;
 }
+
 #location {
   border: 0 !important;
   border-radius: 5px;
@@ -64,20 +73,24 @@ button {
   margin: 0px 0px 20px 0px !important;
   padding: 8.5px 20px !important;
 }
+
 .riddleBox {
   border: 5px double #e7e7e7;
   border-radius: 15px;
   padding: 15px;
 }
+
 #riddleAnswer {
   display: block;
   position: relative;
   transform: rotateY(180deg);
 }
+
 .fiveDay {
   margin: 0 !important;
   padding-top: 15px;
 }
+
 .text-muted {
   font-size: 12pt;
 }
